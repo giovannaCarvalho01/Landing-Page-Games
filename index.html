@@ -15,17 +15,20 @@
     <link rel="stylesheet" href="/Assets/css/menu.css" />
     <link rel="stylesheet" href="/Assets/css/styles.css" />
   </head>
-  <body class="main-bg">
+  <body>
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu white-bg">
       <div class="main-content menu-content">
-        <h1><a href="#home">LOGO</a></h1>
+        <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home">LOGO</a></h1>
         <nav>
-          <ul>
-            <li><a href="#intro">intro</a></li>
-            <li><a href="#top3">top 3</a></li>
-            <li><a href="#grid-one">grid-one</a></li>
-            <li><a href="#gallery">gallery</a></li>
-            <li><a href="#">intro</a></li>
+          <ul onclick="getElementById('close-menu').checked = false;">
+            <li><a href="#intro">Introdução</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#top3">Top 3</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li><a href="#footer">Footer</a></li>
           </ul>
         </nav>
       </div>
@@ -34,8 +37,11 @@
     <section id="intro" class="intro main-bg section">
       <div class="main-content intro-content">
         <div class="intro-text-content">
-          <h2>Texto</h2>
-          <p>Blablabla</p>
+          <h2>GameVerse - O Universo dos Jogos</h2>
+          <p>O GameVerse tem como objetivo criar uma comunidade vibrante e unida de amantes de jogos, proporcionando-lhes um local único 
+            para compartilhar sua paixão, aprender, discutir e ficar atualizados sobre o emocionante mundo dos jogos. 
+            Seja você um jogador casual ou um entusiasta hardcore, o GameVerse é o seu portal definitivo para o universo dos jogos.
+          </p>
         </div>
         <div class="intro-img">
           <img
@@ -45,31 +51,34 @@
         </div>
       </div>
     </section>
-    <section id="top3" class="white-bg section">
+    <section id="sobre" class="white-bg section">
       <div class="main-content top3-content">
-        <h2>Top 3 Jogos</h2>
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
+        <h2>Sobre</h2>
+        <p>O GameVerse é o destino definitivo para todos os entusiastas de jogos, sejam eles jogadores casuais ou hardcore. 
+          Este site vibrante e dinâmico foi projetado com paixão para oferecer uma experiência imersiva e informativa aos amantes dos jogos de todas as idades.</p>
       </div>
     </section>
 
-    <section id="grid-one" class="grid-one main-bg section">
+    <section id="top3" class="grid-one main-bg section">
       <div class="main-content grid-one-content">
-        <h2 class="grid-main-heading">top 3 algo</h2>
-        <p class="grid-description">desc</p>
+        <h2 class="grid-main-heading">top 3 jogos</h2>
+        <p class="grid-description">Descrição dos três princiais jogos escolhidos para esse site.</p>
         <div class="grid">
           <article>
-            <h3>Teste</h3>
-            <p>Algoo</p>
+            <h3>Call Of Duty - MW II</h3>
+            <p>Modern Warfare 2 é um jogo eletrônico de tiro em primeira pessoa desenvolvido pela Infinity Ward e distribuído pela Activision
+               para as plataformas Microsoft Windows, PlayStation 3 e Xbox 360. Anunciado oficialmente em 11 de fevereiro de 2009, foi lançado
+                mundialmente em 10 de novembro de 2009.</p>
           </article>
           <article>
-            <h3>Teste</h3>
-            <p>Algoo</p>
+            <h3>GTA V</h3>
+            <p>Grand Theft Auto V é um jogo eletrônico de ação-aventura desenvolvido pela Rockstar North e publicado pela Rockstar Games.</p>
           </article>
           <article>
-            <h3>Teste</h3>
-            <p>Algoo</p>
+            <h3>The Last of US Part I</h3>
+            <p>The Last of Us Part I é um jogo eletrônico de ação-aventura desenvolvido pela Naughty Dog e publicado pela Sony Interactive Entertainment.
+               É um remake de The Last of Us, apresentando jogabilidade e controles revisados, incluindo combate e exploração aprimorados e opções
+                de acessibilidade expandidas.</p>
           </article>
         </div>
       </div>
@@ -78,7 +87,7 @@
     <section id="gallery" class="grid-one white-bg section">
       <div class="main-content grid-one-content">
         <h2 class="grid-main-heading">gallery</h2>
-        <p class="grid-description">desc</p>
+        <p class="grid-description">Galeria com algumas fotos dos gamers e jogos.</p>
 
         <div class="grid">
           <div class="gallery-img">
@@ -96,44 +105,34 @@
 
     <section id="contact" class="intro main-bg section">
       <div class="main-content intro-content">
-        <div class="intro-text-content">
-          <h2>Texto</h2>
-          <p>Blablabla</p>
-        </div>
-        <div class="intro-img">
-          <img
-            src="/Assets/img/undraw_gaming_re_cma2.svg"
-            alt="Um homem e uma mulher segurando um controle de playstation"
-          />
-        </div>
         <div class="contact-form">
-          <fieldset>
-            <legend>Contacte-me</legend>
+          <fieldset class="form-grid">
+            <legend>Contato</legend>
             <div class="form-group">
               <label for="first-name"> First name</label>
-              <input type="text" name="first-name" id="first-name" />
+              <input type="text" name="first-name" id="first-name" placeholder="Your first name"/>
             </div>
 
             <div class="form-group">
-              <label for="last-name"> First name</label>
-              <input type="text" name="last-name" id="last-name" />
+              <label for="last-name"> Last name</label>
+              <input type="text" name="last-name" id="last-name" placeholder="Your last name"/>
             </div>
 
             <div class="form-group">
               <label for="email"> E-mail</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" placeholder="Your e-mail"/>
             </div>
 
-            <div class="form-group">
-              <label for="message">Message</label>
+            <div class="form-group full-width">
+              <label for="message" >Message</label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 rows="10"
-              ></textarea>
+                placeholder="Your message" ></textarea>
 
-              <div class="form-group">
+              <div class="form-group full-width">
                 <button type="submit">Send Message</button>
               </div>
             </div>
@@ -141,5 +140,11 @@
         </div>
       </div>
     </section>
+
+    <footer id="footer" class="footer white-bg">
+      <p><a rel="nofollow" target="_blank" href="">Feito por Giovanna 😊</a></p>
+    </footer>
+
+    <a class="back-to-top" href="#">➤</a>
   </body>
 </html>
